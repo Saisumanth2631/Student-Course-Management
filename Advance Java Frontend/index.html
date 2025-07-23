@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./index.css">
+    <style>
+         body {
+    position: relative;
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+}
+
+body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url("./stud2.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center ;
+    opacity: 0.5; /* Change this value between 0 and 1 for desired opacity */
+    z-index: -1;
+}
+
+    </style>
+</head>
+<body>
+    <header>
+        <img src="./download.jpg" alt="logo">
+        <ul>
+            <li><a href="">Home</a></li>
+            <li>
+                <a href="courses.html">Courses</a>
+            </li>
+            <li id="profilebtn"><a href="">Profile</a></li>
+            <li id="mycoursesBtn"><a href="./mycourses.html">Mycourses</a></li>
+            <li id="register">
+                <span>Register</span>
+                <ul id="registerOptions" style="display: none; list-style: none;">
+                  <li id="studreg"><a href="./register.html">Register As Student</a></li>
+                  <li id="admreg"><a href="./adminRegister.html">Register As Admin</a></li>
+                </ul>
+              </li>
+            <li id="logoutbtn"><a href="">Logout</a></li>
+            <li id="login">
+                <span>Login</span>
+                <ul id="loginOptions" style="display: none; list-style: none;">
+                    <li id="studlogin"><a href="./login.html">Login As Student</a></li>
+                    <li id="admlogin"><a href="./adminLogin.html">Login As Admin</a></li>
+                </ul>
+              </li>
+           
+
+        </ul>
+    </header>
+    <section class="hero">
+        <h1>Welcome to Our Learning Platform</h1>
+        <p>Explore top courses, enhance your skills, and unlock your potential with us.</p>
+        <a href="courses.html" class="cta-button">Browse Courses</a>
+    </section>
+
+    <script src="./index.js"></script>
+</body>
+</html>

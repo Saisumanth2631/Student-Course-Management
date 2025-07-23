@@ -1,0 +1,194 @@
+/* Global Styles */
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    background: linear-gradient(120deg, #d16ba5, #86a8e7, #5ffbf1);
+    background-size: 200% 200%;
+    animation: gradientShift 10s ease infinite;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Header Styling - reduced height */
+header {
+    width: 100%;
+    background-color: #fff3e6;
+    padding: 15px 20px;
+    text-align: center;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    border-bottom: 4px solid #f2c94c;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+header img {
+    height: 100px;
+    width: 100px;
+    object-fit: cover;
+    border-radius: 50%;
+    box-shadow: 0 0 10px rgba(0,0,0,0.2);
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+header img:hover {
+    transform: scale(1.1);
+}
+
+h2 {
+    font-size: 28px;
+    color: #333;
+    margin: 0;
+}
+
+/* Profile Picture */
+#pic {
+    border-radius: 50%;
+    height: 200px;
+    width: 200px;
+    margin-top: 30px;
+    object-fit: cover;
+    box-shadow: 0 6px 12px rgba(0,0,0,0.3);
+}
+
+/* Profile Table */
+#profile {
+    width: 90%;
+    max-width: 800px;
+    margin: 30px auto;
+    border-collapse: collapse;
+    background: #fff;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 8px 24px rgba(0,0,0,0.2);
+    animation: fadeIn 0.8s ease;
+}
+
+#profile th,
+#profile td {
+    padding: 15px 20px;
+    text-align: left;
+    font-size: 18px;
+    border-bottom: 1px solid #eee;
+}
+
+#profile th {
+    background-color: #6a11cb;
+    color: #fff;
+    font-size: 20px;
+    text-transform: uppercase;
+}
+
+#profile tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+/* Buttons */
+button {
+    padding: 12px 26px;
+    font-size: 16px;
+    font-weight: bold;
+    margin: 10px 10px 30px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+
+button a {
+    color: white;
+    text-decoration: none;
+}
+
+/* EDIT Button (green) */
+button:first-of-type {
+    background-color: #28a745;
+}
+
+button:first-of-type:hover {
+    background-color: #218838;
+}
+
+/* DELETE Button (red) */
+#deleteBtn {
+    background-color: #e60000;
+    color: white;
+}
+
+#deleteBtn:hover {
+    background-color: #cc0000;
+}
+
+/* Upload Button (blue) */
+#uploadImgBtn {
+    background-color: #007bff;
+    color: white;
+}
+
+#uploadImgBtn:hover {
+    background-color: #0056b3;
+}
+
+/* File Input */
+#fileInput {
+    margin-top: 10px;
+    padding: 10px;
+    font-size: 16px;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes gradientShift {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    header img {
+        height: 80px;
+        width: 80px;
+    }
+
+    h2 {
+        font-size: 22px;
+    }
+
+    #profile th,
+    #profile td {
+        font-size: 16px;
+        padding: 10px;
+    }
+
+    #pic {
+        height: 150px;
+        width: 150px;
+    }
+
+    button {
+        font-size: 14px;
+        padding: 10px 20px;
+    }
+}
